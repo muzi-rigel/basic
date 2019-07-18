@@ -31,5 +31,16 @@ public class StaticBlockDemo {
         System.out.println("num2:" + num2);
         StaticBlockDemo demo2 = new StaticBlockDemo();
         StaticBlockDemo demo3 = new StaticBlockDemo();
+
+//        结果：
+//        执行静态初始化块。。。
+//        执行初始化块。。。
+//        执行构造方法。。。
+//        num1:1
+//        num2:3
+//        执行初始化块。。。
+//        执行构造方法。。。
+//        执行初始化块。。。
+//        执行构造方法。。。
     }
 }
