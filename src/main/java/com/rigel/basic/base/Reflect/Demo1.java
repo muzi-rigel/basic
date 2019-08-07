@@ -17,5 +17,8 @@ public class Demo1 {
 
         System.out.println(clazz1 == clazz2);
         System.out.println(clazz2 == clazz3);
+
+        Person o = (Person) clazz1.newInstance();
+        o.run();
     }
 }
