@@ -8,7 +8,7 @@ package com.rigel.basic.base.Reflect;
 
 import java.lang.reflect.Constructor;
 
-public class Demo2 {
+public class Demo2_Constructor {
 
     public static void main(String[] args) throws Exception {
 

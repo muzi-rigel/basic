@@ -6,7 +6,7 @@ package com.rigel.basic.base.Reflect;
 //	* b:静态属性class,锁对象
 //	* c:Class类中静态方法forName(),读取配置文件
 
-public class Demo1 {
+public class Demo1_Reflect {
 
     public static void main(String[] args) throws Exception {
 
