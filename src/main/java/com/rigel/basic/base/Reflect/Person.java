@@ -15,8 +15,16 @@ public class Person {
         this.age = age;
     }
 
-    public void run(){
+    public void run() {
         System.out.println("人在跑");
+    }
+
+    public void eat() {
+        System.out.println("今天吃了一顿金钱豹");
+    }
+
+    public void eat(int num) {
+        System.out.println("今天吃了" + num + "顿金钱豹");
     }
 
     @Override
