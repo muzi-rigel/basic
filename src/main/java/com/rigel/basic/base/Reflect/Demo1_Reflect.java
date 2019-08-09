@@ -10,9 +10,12 @@ public class Demo1_Reflect {
 
     public static void main(String[] args) throws Exception {
 
+        //	* c:Class类中静态方法forName(),读取配置文件
         Class clazz1 = Class.forName("com.rigel.basic.base.Reflect.Person");
+        //	* b:静态属性class,锁对象
         Class clazz2 = Person.class;
         Person p = new Person();
+        //	* a:Object类的getClass()方法,判断两个对象是否是同一个字节码文件
         Class clazz3 = p.getClass();
 
         System.out.println(clazz1 == clazz2);
