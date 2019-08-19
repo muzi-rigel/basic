@@ -1,4 +1,4 @@
-package com.rigel.basic.DesignPattern.模板模式;
+package com.rigel.basic.designPattern.模板模式;
 
 /**
  *  定义一个算法的骨架 将具体的算法延迟到子类来实现
