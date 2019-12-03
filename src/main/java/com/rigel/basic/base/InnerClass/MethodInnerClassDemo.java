@@ -28,7 +28,7 @@ public class MethodInnerClassDemo {
             public void print() {
                 System.out.println("访问外部类的方法中的常量a:" + a);
                 System.out.println("访问内部类中的变量c:" + c);
-                System.out.println(b);
+//                System.out.println(b);
             }
         }
         MInner mi = new MInner();

@@ -1,0 +1,16 @@
+package com.rigel.basic.base.collections.hashMap;
+
+public class GenerCode {
+
+    public static void main(String[] args) {
+
+        for (int i = 0; i < 10; i++) {
+            StringBuilder sb = new StringBuilder();
+            for (int i1 = 0; i1 < 7; i1++) {
+                sb.append(i);
+                Integer num = Integer.parseInt(sb.toString());
+                System.out.println("map.put("+num+","+num+");");
+            }
+        }
+    }
+}
