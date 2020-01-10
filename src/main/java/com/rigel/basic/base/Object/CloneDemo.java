@@ -44,6 +44,10 @@ public class CloneDemo {
         if (p1 != null) {
             System.out.println(p); //若引用的是同一个类，打印的hash值是一样的，clone的是不同的
             System.out.println(p1);
+
+            //结果
+            //com.rigel.basic.base.Object.Person@f6f4d33
+            //com.rigel.basic.base.Object.Person@23fc625e
         }
     }
 }
