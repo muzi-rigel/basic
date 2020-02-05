@@ -3,9 +3,12 @@ package com.rigel.basic.base.Object;
 public class FinalizeDemo {
     public static void main(String[] args) {
         Book novel = new Book(true);
-        novel.checkIn();
+//        novel.checkIn();
         new Book(true);
-        System.gc();
+        novel = null;
+//        System.gc();
+
+
     }
 }
 
