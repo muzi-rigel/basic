@@ -1,6 +1,6 @@
 package com.rigel.basic.base.datatype;
 
-public class ByteDemo {
+public class DataTypeDemo {
 
     public static void main(String[] args) {
 //        byte b = new Byte();
@@ -29,6 +29,13 @@ public class ByteDemo {
         System.out.println(Integer.toBinaryString(1));
         //11111111111111111111111111111111 反码
         System.out.println(Integer.toBinaryString(-1));
+
+        float f = Float.MAX_VALUE;
+        System.out.println(f);
+        float f2 = 3e38f;
+
+        double b = Double.MAX_VALUE;
+        System.out.println(b);
 
 
     }
