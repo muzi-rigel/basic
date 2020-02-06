@@ -32,10 +32,18 @@ public class DataTypeDemo {
 
         float f = Float.MAX_VALUE;
         System.out.println(f);
-        float f2 = 3e38f;
+        float f2 = Float.MIN_VALUE;
+        System.out.println(f2);
+        float f3 = 3e38f;
+        System.out.println("------------");
 
         double b = Double.MAX_VALUE;
         System.out.println(b);
+        double b2 = Double.MIN_VALUE;
+        System.out.println(b2);
+
+        char c = '中';
+        System.out.println((int) c);
 
 
     }
