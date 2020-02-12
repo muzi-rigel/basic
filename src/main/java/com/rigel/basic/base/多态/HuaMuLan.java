@@ -16,4 +16,24 @@ public class HuaMuLan extends HuaHu{
     public void beauty(){
         System.out.println("涂抹胭脂");
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
+    @Override
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public Integer getAge() {
+        return age;
+    }
+
+    @Override
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }

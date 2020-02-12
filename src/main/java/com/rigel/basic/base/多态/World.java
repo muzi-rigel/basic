@@ -11,6 +11,7 @@ public class World {
         HuaHu huaHu = new HuaMuLan();
         huaHu.fight();
         System.out.println(huaHu.age);
+        System.out.println(huaHu.getAge());
         HuaHu.introduce();
         HuaMuLan.introduce();
         HuaMuLan mulan = (HuaMuLan) huaHu;
