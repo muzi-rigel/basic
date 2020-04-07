@@ -1,9 +1,10 @@
-package com.rigel.basic.base.proxy.dynamicproxy;
+package com.rigel.basic.base.proxy.dynamicproxy.jdkdynamicproxy;
 
 public class UserImpl implements User{
     @Override
-    public void add() {
+    public Object add() {
         System.out.println("注册用户");
+        return 1;
     }
 
     @Override
