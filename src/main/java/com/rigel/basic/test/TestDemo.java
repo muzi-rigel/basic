@@ -13,7 +13,7 @@ public class TestDemo {
         System.out.println(a.elementData == b.elementData);
 
 
-//        a.elementData = new Object[]{1,3,5,6};
+//        a.elementData = new object[]{1,3,5,6};
         A.DEFAULTCAPACITY_EMPTY_ELEMENTDATA = new Object[]{1,3,5,6};
         System.out.println(Arrays.toString(a.elementData));
         System.out.println(Arrays.toString(b.elementData));
