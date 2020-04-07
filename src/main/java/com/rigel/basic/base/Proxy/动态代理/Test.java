@@ -1,4 +1,4 @@
-package com.rigel.basic.base.动态代理;
+package com.rigel.basic.base.Proxy.动态代理;
 
 import java.lang.reflect.Proxy;
 

@@ -1,5 +1,7 @@
 package com.rigel.basic.base.多态;
 
+import java.lang.reflect.InvocationTargetException;
+
 public class World {
 
     public static void main(String[] args) {
@@ -14,6 +16,11 @@ public class World {
         System.out.println(huaHu.getAge());
         HuaHu.introduce();
         HuaMuLan.introduce();
+        try {
+            huaHu.getClass().getMethod("beauty").invoke(huaHu);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         HuaMuLan mulan = (HuaMuLan) huaHu;
         mulan.beauty();
 
