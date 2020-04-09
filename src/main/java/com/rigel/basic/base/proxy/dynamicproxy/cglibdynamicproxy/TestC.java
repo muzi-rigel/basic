@@ -28,6 +28,10 @@ public class TestC {
         UserImpl o = (UserImpl) enhancer.create();
         o.add();
         o.delete();
+        System.out.println("-------");
+        System.out.println(o.hashCode());
+        System.out.println("-------");
+        System.out.println(o.getClass());
     }
 
 }

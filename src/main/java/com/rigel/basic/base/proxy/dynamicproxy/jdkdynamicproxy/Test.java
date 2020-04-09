@@ -28,5 +28,9 @@ public class Test {
                 });
 
         Object add = u1.add();
+        System.out.println("-----------");
+        System.out.println(u1.hashCode());
+        System.out.println("-----------");
+        System.out.println(u1.getClass());
     }
 }
