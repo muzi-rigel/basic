@@ -15,7 +15,7 @@ public class Consumer implements Runnable {
 
         try {
             while (true) {
-                Thread.sleep(100);
+                Thread.sleep(1000);
                 Object obj = bq.take();
                 System.out.println("消费完成，队列长度变为" + bq.size());
                 System.out.println("消费对象-->" + obj);

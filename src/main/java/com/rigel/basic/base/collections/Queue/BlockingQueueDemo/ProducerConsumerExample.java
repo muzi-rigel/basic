@@ -1,7 +1,6 @@
 package com.rigel.basic.base.collections.Queue.BlockingQueueDemo;
 
-import java.util.concurrent.ArrayBlockingQueue;
-import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.*;
 
 public class ProducerConsumerExample {
 
@@ -10,7 +9,7 @@ public class ProducerConsumerExample {
         int numProducers = 4;
         int numConsumers = 3;
 
-        BlockingQueue<Object> myQueue = new ArrayBlockingQueue<Object>(5);
+        BlockingQueue<Object> myQueue = new SynchronousQueue<>();
 
         for (int i = 0; i < numProducers; i++) {
             new Thread(new Producer(myQueue)).start();
@@ -20,7 +19,7 @@ public class ProducerConsumerExample {
             new Thread(new Consumer(myQueue)).start();
         }
 
-        Thread.sleep(1000);
+        Thread.sleep(5000);
 
         System.exit(0);
     }
