@@ -1,4 +1,4 @@
-package com.rigel.basic.base.collections.Queue.BlockingQueueDemo;
+package com.rigel.basic.base.collections.Queue.BlockingQueue.BlockingQueueDemo;
 
 import java.util.concurrent.*;
 
@@ -9,7 +9,7 @@ public class ProducerConsumerExample {
         int numProducers = 4;
         int numConsumers = 3;
 
-        BlockingQueue<Object> myQueue = new SynchronousQueue<>();
+        BlockingQueue<Object> myQueue = new LinkedBlockingDeque<>();
 
         for (int i = 0; i < numProducers; i++) {
             new Thread(new Producer(myQueue)).start();
