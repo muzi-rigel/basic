@@ -19,7 +19,7 @@ public class ProducerConsumerExample {
             new Thread(new Consumer(myQueue)).start();
         }
 
-        Thread.sleep(5000);
+        Thread.sleep(2000);
 
         System.exit(0);
     }
