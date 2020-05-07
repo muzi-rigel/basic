@@ -1,4 +1,4 @@
-package com.rigel.basic.base.collections.Queue.BlockingQueue;
+package com.rigel.basic.base.collections.queue.BlockingQueue;
 
 import java.util.concurrent.SynchronousQueue;
 

@@ -1,4 +1,4 @@
-package com.rigel.basic.base.collections.Queue;
+package com.rigel.basic.base.collections.queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
