@@ -9,6 +9,28 @@ import java.util.concurrent.SynchronousQueue;
 
 public class TestDemo {
 
+    private ThreadLocal<Integer> local = new ThreadLocal<Integer>() {
+        @Override
+        protected Integer initialValue() {
+            return 0;
+        }
+    };
+
+    @Test
+    public void test4(){
+        Integer integer = local.get();
+        System.out.println(integer);
+    }
+
+    @Test
+    public void test3() throws InterruptedException {
+        SynchronousQueue queue = new SynchronousQueue();
+        Object o = queue.remove();
+        queue.add("a");
+        //都抛异常。。
+        System.out.println(o);
+    }
+
     @Test
     public void test1() throws Exception {
         SynchronousQueue workQueue = new SynchronousQueue();
@@ -23,7 +45,7 @@ public class TestDemo {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println(take);
+                System.out.println("take="+take);
             }
         }).start();
 
