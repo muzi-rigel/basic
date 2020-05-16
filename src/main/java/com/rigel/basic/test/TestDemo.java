@@ -17,6 +17,12 @@ public class TestDemo {
     };
 
     @Test
+    public void test5(){
+        int a = (a = 16 << 1);
+        System.out.println(a);
+    }
+
+    @Test
     public void test4(){
         Integer integer = local.get();
         System.out.println(integer);

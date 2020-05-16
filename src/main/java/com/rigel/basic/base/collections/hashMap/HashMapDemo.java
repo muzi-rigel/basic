@@ -10,6 +10,7 @@ public class HashMapDemo {
         Map<Integer,Integer> map = new HashMap();
 
         map.put(32,32);
+        map.put(32,11111);
         map.put(64,64);
         map.put(96,96);
         map.put(128,128);
