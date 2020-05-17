@@ -28,7 +28,7 @@ public class Producer implements Runnable{
                 // 模拟一秒生产一条消息
                 Thread.sleep(1000);
                 cache.add(new Random().nextInt());
-                System.out.println("--producer notify--");
+                System.out.println("--producer product "+cache.get(0)+"-producer notify--");
                 cache.notify();
             }
             catch (Exception e) {
