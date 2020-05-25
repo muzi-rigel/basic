@@ -3,10 +3,10 @@ package com.rigel.basic.base.thread;
 public class JoinDemo {
 
     public static void main(String[] args) throws InterruptedException {
-//        thread t1 = new thread(new myThread());
-//        t1.start();
-//        t1.join();
-//        System.out.println("Main end");
+        Thread t1 = new Thread(new myThread());
+        t1.start();
+        t1.join();
+        System.out.println("Main end");
 
 
 
