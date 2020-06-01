@@ -17,6 +17,12 @@ public class TestDemo {
     };
 
     @Test
+    public void test6(){
+//        System.out.println(System.getProperty("java.class.path"));
+        System.out.println(System.getProperty("java.ext.dirs"));
+    }
+
+    @Test
     public void test5(){
         int a = (a = 16 << 1);
         System.out.println(a);
