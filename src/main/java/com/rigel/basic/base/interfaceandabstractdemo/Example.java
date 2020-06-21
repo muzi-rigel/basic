@@ -8,6 +8,8 @@ public class Example {
         Cat cat1 = new BlackCat();
         cat1.eat();
 
+        System.out.println(cat.getName());
+
 
     }
 }
