@@ -16,11 +16,12 @@ public class CountDownLatchTest {
             public void run() {
                 try {
                     Thread.sleep(3000);
-                    System.out.println("子线程："+Thread.currentThread().getName()+"执行");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                System.out.println("子线程："+Thread.currentThread().getName()+"执行完毕");
                 latch.countDown();
+                System.out.println("子线程："+Thread.currentThread().getName()+"countdown完毕");
             }
         });
         es1.shutdown();
@@ -31,12 +32,13 @@ public class CountDownLatchTest {
             @Override
             public void run() {
                 try {
-                    Thread.sleep(3000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("子线程："+Thread.currentThread().getName()+"执行");
+                System.out.println("子线程："+Thread.currentThread().getName()+"执行完毕");
                 latch.countDown();
+                System.out.println("子线程："+Thread.currentThread().getName()+"countdown完毕");
             }
         });
         es2.shutdown();
