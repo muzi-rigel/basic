@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.io.File;
 import java.io.FileInputStream;
 import java.util.concurrent.SynchronousQueue;
+import java.util.concurrent.atomic.AtomicInteger;
 
 
 public class TestDemo {
@@ -15,6 +16,47 @@ public class TestDemo {
             return 0;
         }
     };
+
+
+    @Test
+    public void test9(){
+
+        while(true){
+            int random = (int) (Math.random()*100);
+            System.out.println(random);
+            if(random > 90)
+                break;
+        }
+    }
+
+    @Test
+    public void test8(){
+        Thread thread = new Thread(new Runnable() {
+            @Override
+            public void run() {
+                while (true){
+                    System.out.println("1");
+                    throw new Error("error");
+                }
+            }
+        });
+        thread.start();
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("main thread is still alive!");
+    }
+
+
+    @Test
+    public void test7(){
+        AtomicInteger i = new AtomicInteger(5);
+        System.out.println(i.incrementAndGet());
+    }
 
     @Test
     public void test6(){
