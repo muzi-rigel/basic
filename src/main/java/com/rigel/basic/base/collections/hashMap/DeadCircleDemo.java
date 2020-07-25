@@ -47,7 +47,7 @@ public class DeadCircleDemo {
                         e = next;
                         System.out.printf("线程2循环1结束 参数为：e={%s}，newTable2[1]={%s}，next={%s}", getEntryListValue(e), getEntryListValue(newTable2[1]), getEntryListValue(next));
                         System.out.println();
-                        if(null == e){
+                        if (null == e) {
                             System.out.println("e为null,自然跳出循环..");
                         }
 

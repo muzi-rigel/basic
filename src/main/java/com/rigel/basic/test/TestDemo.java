@@ -19,6 +19,19 @@ public class TestDemo {
 
 
     @Test
+    public void test10(){
+        int a = 0;
+        int b = 1;
+        int c = 2;
+
+        a = b = c;
+
+        System.out.println(a);
+        System.out.println(b);
+        System.out.println(c);
+    }
+
+    @Test
     public void test9(){
 
         while(true){

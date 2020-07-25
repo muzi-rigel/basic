@@ -27,6 +27,9 @@ public class Person {
             System.out.println(I_OFFSET);
 
 
+            UNSAFE.getObjectVolatile(11,11l);
+
+
         } catch (NoSuchFieldException | IllegalAccessException e) {
             e.printStackTrace();
         }
