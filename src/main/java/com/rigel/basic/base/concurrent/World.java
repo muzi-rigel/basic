@@ -1,4 +1,4 @@
-package com.rigel.basic.base.multithread;
+package com.rigel.basic.base.concurrent;
 
 public class World {
 

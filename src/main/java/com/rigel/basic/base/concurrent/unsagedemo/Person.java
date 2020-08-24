@@ -1,4 +1,4 @@
-package com.rigel.basic.base.multithread.unsagedemo;
+package com.rigel.basic.base.concurrent.unsagedemo;
 
 import sun.misc.Unsafe;
 

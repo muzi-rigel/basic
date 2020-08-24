@@ -1,4 +1,4 @@
-package com.rigel.basic.base.multithread.volatileDemo;
+package com.rigel.basic.base.concurrent.volatileDemo;
 
 public class Person {
 
