@@ -17,9 +17,45 @@ public class TestDemo {
         }
     };
 
+    @Test
+    public void test12() {
+        int a = 5;
+        int b = 10;
+        System.out.println("a=" + a + " b=" + b);
+
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+
+        System.out.println("a=" + a + " b=" + b);
+
+        a = a + b;
+        b = a - b;
+        a = a - b;
+
+        System.out.println("a=" + a + " b=" + b);
+
+
+    }
 
     @Test
-    public void test10(){
+    public void test11() {
+        int data[] = null;
+        data = new int[3]; //开辟一个长度为3的数组
+        int temp[] = null; //声明对象
+        data[0] = 10;
+        data[1] = 20;
+        data[2] = 30;
+        temp = data;  //int temp[] = data;
+        temp[0] = 99;
+        for (int i = 0; i < temp.length; i++) {
+            System.out.println(data[i]);
+        }
+    }
+
+
+    @Test
+    public void test10() {
         int a = 0;
         int b = 1;
         int c = 2;
@@ -32,22 +68,22 @@ public class TestDemo {
     }
 
     @Test
-    public void test9(){
+    public void test9() {
 
-        while(true){
-            int random = (int) (Math.random()*100);
+        while (true) {
+            int random = (int) (Math.random() * 100);
             System.out.println(random);
-            if(random > 90)
+            if (random > 90)
                 break;
         }
     }
 
     @Test
-    public void test8(){
+    public void test8() {
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                while (true){
+                while (true) {
                     System.out.println("1");
                     throw new Error("error");
                 }
@@ -66,25 +102,25 @@ public class TestDemo {
 
 
     @Test
-    public void test7(){
+    public void test7() {
         AtomicInteger i = new AtomicInteger(5);
         System.out.println(i.incrementAndGet());
     }
 
     @Test
-    public void test6(){
+    public void test6() {
 //        System.out.println(System.getProperty("java.class.path"));
         System.out.println(System.getProperty("java.ext.dirs"));
     }
 
     @Test
-    public void test5(){
+    public void test5() {
         int a = (a = 16 << 1);
         System.out.println(a);
     }
 
     @Test
-    public void test4(){
+    public void test4() {
         Integer integer = local.get();
         System.out.println(integer);
     }
@@ -112,7 +148,7 @@ public class TestDemo {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                System.out.println("take="+take);
+                System.out.println("take=" + take);
             }
         }).start();
 
