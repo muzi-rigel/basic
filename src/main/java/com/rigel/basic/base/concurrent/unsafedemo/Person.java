@@ -1,4 +1,4 @@
-package com.rigel.basic.base.concurrent.unsagedemo;
+package com.rigel.basic.base.concurrent.unsafedemo;
 
 import sun.misc.Unsafe;
 
