@@ -1,5 +1,4 @@
 package com.rigel.basic.base.collections.hashMap;
-
 public class GenerCode {
 
     public static void main(String[] args) {
