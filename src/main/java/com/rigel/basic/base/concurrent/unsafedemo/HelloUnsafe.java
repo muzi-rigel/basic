@@ -4,6 +4,9 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 
+/**
+ * unsafe 可以获得私有构造方法的类
+ */
 public class HelloUnsafe {
 
     public static void main(String[] args) throws InstantiationException, NoSuchFieldException, IllegalAccessException {
