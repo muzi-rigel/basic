@@ -13,7 +13,7 @@ public class ReentrantlockDemo3 {
         lock.lock();
         System.out.println(name + " locked");
         try {
-            TimeUnit.MINUTES.sleep(5);
+            TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }

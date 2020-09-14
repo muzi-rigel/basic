@@ -5,6 +5,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReentrantlockDemo implements Runnable {
 
     private static ReentrantLock lock = new ReentrantLock(true);
+//    private static ReentrantLock lock = new ReentrantLock(false);
 
     @Override
     public void run() {
@@ -16,6 +17,7 @@ public class ReentrantlockDemo implements Runnable {
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
+                System.out.println(Thread.currentThread().getName() + " unlock");
                 lock.unlock();
             }
         }
