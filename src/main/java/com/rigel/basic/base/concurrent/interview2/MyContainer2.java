@@ -1,6 +1,7 @@
 package com.rigel.basic.base.concurrent.interview2;
 
 import java.util.LinkedList;
+import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -19,6 +20,7 @@ public class MyContainer2<T> {
     public void put(T t) {
         try {
             lock.lock();
+            showLock(lock);
             while (lists.size() == MAX) { //想想为什么用while而不是用if？
                 producer.await();
             }
@@ -29,6 +31,7 @@ public class MyContainer2<T> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
+            showUnlock("unlock");
             lock.unlock();
         }
     }
@@ -37,6 +40,7 @@ public class MyContainer2<T> {
         T t = null;
         try {
             lock.lock();
+            showLock(lock);
             while (lists.size() == 0) {
                 consumer.await();
             }
@@ -46,6 +50,7 @@ public class MyContainer2<T> {
         } catch (InterruptedException e) {
             e.printStackTrace();
         } finally {
+            showUnlock("unlock");
             lock.unlock();
         }
         return t;
@@ -72,5 +77,15 @@ public class MyContainer2<T> {
                 for (int j = 0; j < 25; j++) c.put(Thread.currentThread().getName() + " " + j);
             }, "p" + i).start();
         }
+
     }
+
+    private static void showUnlock(String s) {
+//        System.out.println(Thread.currentThread().getName() + s);
+    }
+
+    private static void showLock(Lock lock) {
+//        System.out.println(Thread.currentThread().getName() + " get lock" + lock);
+    }
+
 }

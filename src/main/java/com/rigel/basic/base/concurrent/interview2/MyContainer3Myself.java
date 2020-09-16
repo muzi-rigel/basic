@@ -8,6 +8,12 @@ import java.util.concurrent.locks.ReentrantLock;
 public class MyContainer3Myself<T> {
 
     private static final int MAX = 10;
+    public static final String START = " try to get lock";
+    public static final String SUCCESS = " get lock successfully";
+    public static final String UNLOCK = " unlock";
+    public static final String AWAIT = " await";
+    public static final String CONSUME = " consume-";
+    public static final String PRODUCT = " product-";
 
     List lists = new LinkedList();
 
@@ -21,36 +27,40 @@ public class MyContainer3Myself<T> {
         Runnable producerR = (new Runnable() {
             @Override
             public void run() {
+                showLock(lock, START);
                 lock.lock();
-                System.out.println(Thread.currentThread().getName() + " get lock");
+                showLock(lock, SUCCESS);
                 while (my.lists.size() >= MAX) {
                     try {
                         producerLock.await();
-                        System.out.println(Thread.currentThread().getName() + " await");
+                        showLock(lock, AWAIT);
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
                 }
-                my.lists.add("a");
-                System.out.println(Thread.currentThread().getName() + " product");
+                Object o = "a";
+                System.out.println(Thread.currentThread().getName() + PRODUCT + o);
+                my.lists.add(o);
                 consumerLock.signalAll();
+                showLock(lock, UNLOCK);
                 lock.unlock();
-                System.out.println(Thread.currentThread().getName() + " unlock");
             }
+
         });
         Runnable consumerR = (() -> {
+            showLock(lock, START);
             lock.lock();
-            System.out.println(Thread.currentThread().getName() + " get lock");
+            showLock(lock, SUCCESS);
             while (my.lists.size() == 0) {
                 try {
+                    System.out.println(Thread.currentThread().getName() + AWAIT);
                     consumerLock.await();
-                    System.out.println(Thread.currentThread().getName() + " await");
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-            my.lists.remove(0);
-            System.out.println(Thread.currentThread().getName() + " consume");
+            Object o = my.lists.remove(0);
+            System.out.println(Thread.currentThread().getName() + CONSUME + o);
             producerLock.signalAll();
             lock.unlock();
         });
@@ -69,5 +79,9 @@ public class MyContainer3Myself<T> {
 
         Thread.sleep(100000);
 
+    }
+
+    private static void showLock(ReentrantLock lock, String s) {
+        System.out.println(Thread.currentThread().getName() + " - " + lock + s);
     }
 }

@@ -4,7 +4,7 @@ import java.util.concurrent.Callable;
 
 public class CallableDemo {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         Callable call = new Callable() {
             @Override
@@ -13,6 +13,8 @@ public class CallableDemo {
                 return y;
             }
         };
+        Object o = call.call();
+        System.out.println(o);
 
     }
 }
