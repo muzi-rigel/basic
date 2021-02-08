@@ -18,6 +18,18 @@ public class TestDemo {
     };
 
     @Test
+    public void test13(){
+        float a = (float) 0.2;
+        float b = 0.2f;
+        double c = 0.2;
+        double d = 0.2d;
+        Float t = 20.5f;
+        int i = Float.floatToIntBits(t);
+        t.equals(a);
+        System.out.println(i);
+    }
+
+    @Test
     public void test12() {
         int a = 5;
         int b = 10;

@@ -1,4 +1,4 @@
-package com.rigel.basic.finaldemo;
+package com.rigel.basic.base.finaldemo;
 
 public class FinalDemo {
 

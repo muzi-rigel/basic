@@ -2,6 +2,10 @@ package com.rigel.basic.base.interfaceandabstractdemo;
 
 public abstract class Cat {
 
+    public Cat(){
+        System.out.println("抽象类可以有构造方法！ 只是不能实例化！ 子类会调用父类的构造方法");
+    }
+
     private String name = "cat";
 
     protected void eat() {

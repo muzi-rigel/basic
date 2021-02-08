@@ -10,35 +10,51 @@ public class test {
      */
     public static void main(String[] args) {
 
-        Field[] fields = Cat.class.getFields();
-        System.out.println(fields.length);
-        for (Field field : fields) {
-            System.out.println(field);
+//        Field[] fields = Cat.class.getFields();
+//        System.out.println(fields.length);
+//        for (Field field : fields) {
+//            System.out.println(field);
+//        }
+//
+//        System.out.println("--------------------");
+//
+//        Field[] f2 = Cat.class.getDeclaredFields();
+//        System.out.println(f2.length);
+//        for (Field field : f2) {
+//            System.out.println(field);
+//        }
+//
+//        System.out.println("--------------------");
+//
+//
+//        Method[] methods = Cat.class.getMethods();
+//        System.out.println(methods.length);
+//        for (Method method : methods) {
+//            System.out.println(method);
+//        }
+//
+//        System.out.println("--------------------");
+//        Method[] m2 = Cat.class.getDeclaredMethods();
+//        System.out.println(m2.length);
+//        for (Method method : m2) {
+//            System.out.println(method);
+//        }
+
+        String s = "a";
+        for (int i = 0; i < 100000; i++) {
+            s+=i;
+            if(i % 5 == 0){
+                System.out.println(s);
+                System.out.println(i);
+                try {
+                    Thread.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+
         }
-
-        System.out.println("--------------------");
-
-        Field[] f2 = Cat.class.getDeclaredFields();
-        System.out.println(f2.length);
-        for (Field field : f2) {
-            System.out.println(field);
-        }
-
-        System.out.println("--------------------");
-
-
-        Method[] methods = Cat.class.getMethods();
-        System.out.println(methods.length);
-        for (Method method : methods) {
-            System.out.println(method);
-        }
-
-        System.out.println("--------------------");
-        Method[] m2 = Cat.class.getDeclaredMethods();
-        System.out.println(m2.length);
-        for (Method method : m2) {
-            System.out.println(method);
-        }
+        System.out.println("over");
 
     }
 }

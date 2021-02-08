@@ -1,4 +1,4 @@
-package com.rigel.basic.base.polymorphic;
+package com.rigel.basic.base.polymorphic.mulandemo;
 
 public class World {
 
