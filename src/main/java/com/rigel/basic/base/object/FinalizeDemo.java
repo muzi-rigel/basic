@@ -8,6 +8,11 @@ public class FinalizeDemo {
         novel = null;
 //        System.gc();
 
+        try {
+            Thread.sleep(30000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
     }
 }
