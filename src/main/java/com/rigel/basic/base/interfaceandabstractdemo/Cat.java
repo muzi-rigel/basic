@@ -1,6 +1,9 @@
 package com.rigel.basic.base.interfaceandabstractdemo;
 
 public abstract class Cat {
+//public abstract class Cat implements Animal{  抽象类可以实现接口
+
+    private int age = 0;
 
     public Cat(){
         System.out.println("抽象类可以有构造方法！ 只是不能实例化！ 子类会调用父类的构造方法");
