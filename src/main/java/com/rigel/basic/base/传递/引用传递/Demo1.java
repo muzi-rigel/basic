@@ -1,6 +1,6 @@
 package com.rigel.basic.base.传递.引用传递;
 
-class Test1 {
+class Demo1 {
 
     public static void main(String[] args) throws Exception {
 
@@ -15,6 +15,8 @@ class Test1 {
 
         user.setName("lisi");
         //结果为lisi 方法局部变量和方法外对象指向一片内存空间
+
+        //集合和Maps一样
     }
 
 }
