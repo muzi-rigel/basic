@@ -1,6 +1,6 @@
-package com.rigel.basic.test;
+package com.rigel.basic.base.传递.引用传递;
 
-class Test implements F {
+class Test1 {
 
     public static void main(String[] args) throws Exception {
 
@@ -11,14 +11,14 @@ class Test implements F {
 
     static void fun(User user){
 //        user = new User("lisi");
+        //结果为xiaoming 方法局部变量引向新对象
+
         user.setName("lisi");
+        //结果为lisi 方法局部变量和方法外对象指向一片内存空间
     }
 
 }
 
-interface F {
-
-}
 
 class User{
     private String name;
