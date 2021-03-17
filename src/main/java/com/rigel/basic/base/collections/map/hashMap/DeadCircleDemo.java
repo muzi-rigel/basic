@@ -1,4 +1,4 @@
-package com.rigel.basic.base.collections.hashMap;
+package com.rigel.basic.base.collections.map.hashMap;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;

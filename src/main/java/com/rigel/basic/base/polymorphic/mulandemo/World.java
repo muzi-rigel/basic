@@ -16,6 +16,8 @@ public class World {
         HuaMuLan.introduce();
         try {
             huaHu.getClass().getMethod("beauty").invoke(huaHu);
+            System.out.println("----以下语句会输出HuaMuLan----");
+            System.out.println(huaHu.getClass());
         } catch (Exception e) {
             e.printStackTrace();
         }

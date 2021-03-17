@@ -1,4 +1,4 @@
-package com.rigel.basic.base.collections.concurrenthashmap;
+package com.rigel.basic.base.collections.map.concurrenthashmap;
 
 import java.util.concurrent.ConcurrentHashMap;
 
