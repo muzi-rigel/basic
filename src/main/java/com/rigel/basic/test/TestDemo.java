@@ -71,6 +71,7 @@ public class TestDemo {
     public void test11() {
         int data[] = null;
         data = new int[3]; //开辟一个长度为3的数组
+        int b[] = new int[3];
         int temp[] = null; //声明对象
         data[0] = 10;
         data[1] = 20;
