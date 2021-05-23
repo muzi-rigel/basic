@@ -1,4 +1,4 @@
-package com.rigel.basic.base.innerclass.anonymousinnerclassdemo;
+package com.rigel.basic.base.innerclass.innerclassolddemo.anonymousinnerclassdemo;
 
 public class HelloWorldAnonymousClasses {
 

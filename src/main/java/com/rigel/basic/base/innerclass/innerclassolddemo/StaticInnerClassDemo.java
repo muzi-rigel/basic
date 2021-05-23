@@ -1,4 +1,4 @@
-package com.rigel.basic.base.innerclass;
+package com.rigel.basic.base.innerclass.innerclassolddemo;
 
 //静态内部类
 //外部类

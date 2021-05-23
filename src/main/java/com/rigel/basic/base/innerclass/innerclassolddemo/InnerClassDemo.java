@@ -1,4 +1,4 @@
-package com.rigel.basic.base.innerclass;
+package com.rigel.basic.base.innerclass.innerclassolddemo;
 
 //外部类
 public class InnerClassDemo {
