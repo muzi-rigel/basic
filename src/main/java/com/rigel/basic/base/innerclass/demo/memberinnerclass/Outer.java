@@ -1,5 +1,8 @@
 package com.rigel.basic.base.innerclass.demo.memberinnerclass;
 
+/**
+ * 成员内部类
+ */
 public class Outer {
 
     //内部类可以直接访问外部类的成员 包括私有 但静态内部类不能访问非静态资源
