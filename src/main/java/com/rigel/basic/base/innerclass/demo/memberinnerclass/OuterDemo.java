@@ -1,4 +1,4 @@
-package com.rigel.basic.base.innerclass.demo.localinnerclass;
+package com.rigel.basic.base.innerclass.demo.memberinnerclass;
 
 public class OuterDemo {
 
