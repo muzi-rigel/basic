@@ -14,4 +14,12 @@ public class JumppingDemo {
         jo.method(()-> System.out.println("狗可以跳高了！"));
     }
 
+
+    Jumpping jumpping = new Jumpping() {
+        @Override
+        public void jump() {
+            System.out.println("猫可以跳高了！！");
+        }
+    };
+
 }

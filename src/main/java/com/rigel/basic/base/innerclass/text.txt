@@ -1,0 +1,9 @@
+我们所说的内部类，官方的叫法是嵌套类(Nested Classes)。
+嵌套类包括静态内部类(Static Nested Classes)和内部类(Inner Classes)。
+而内部类分为成员内部类，局部内部类(Local Classes)和匿名内部类(Anonymous Classes)。
+
+
+外部类可以直接访问内部类的对象，包括私有。外部类要访问内部类的成员，必须创建对象。
+
+
+匿名内部类：本质是一个继承了该类或者实现了该接口的子类匿名对象。

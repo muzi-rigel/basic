@@ -6,7 +6,20 @@ public class Test2 {
 
     public static void main(String[] args) {
 
-        System.out.println(test());
+        String result = new String();
+        int a = 3;
+        switch (a){
+            case 2:
+                result += "him";
+            case 1:
+                result += "her";
+            case 3:
+                result += "it";
+            default:
+                result += "me";
+        }
+        System.out.println(result);
+//        System.out.println(test());
 
     }
 
