@@ -35,7 +35,7 @@ public interface Animal {
 
         Field name = Animal.class.getDeclaredField("name");
         System.out.println(Modifier.toString(name.getModifiers()));
-        //接口里的变量都是public static final的
+        //接口里的变量都是public static final的 所以没有变量 都是常量
 
 
     }
