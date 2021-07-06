@@ -23,7 +23,7 @@ public interface Animal3 extends Animal, Animal2 {
 
         Method eat = Animal3.class.getMethod("eat");
         System.out.println(Modifier.toString(eat.getModifiers()));
-        //接口方法默认 public abstract 不能是private 说是JDK1.9可以
+        //public abstract接口方法默认 public abstract 不能是private 说是JDK1.9可以
         //1.8可以是default 但是default得有方法体
 
     }
